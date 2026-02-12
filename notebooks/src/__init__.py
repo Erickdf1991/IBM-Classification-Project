@@ -1,1 +1,1 @@
-from . import config  # noqa: F401
+from . import config, graficos  # noqa: F401

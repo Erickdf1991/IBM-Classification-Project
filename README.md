@@ -1,86 +1,28 @@
-# Modelo de projeto de ciência de dados
 
-Modelo de projeto de ciência de dados para ser utilizado como referência em projetos
-futuros. Desenvolvido por mim, [Francisco Bustamante](https://github.com/chicolucio),
-para alunos iniciantes em ciência de dados de meus cursos e mentorias.
+# Sobre a base de dados
 
-Inspiração: [Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)
+O dataset a ser utilizado é o *IBM HR Analytics Employee Attrition & Performance*, disponível no Kaggle. O dataset contém informações sobre funcionários de uma empresa fictícia, como idade, gênero, estado civil, nível de satisfação, entre outros. O objetivo é prever a probabilidade de um funcionário sair da empresa.
 
-Clique no botão **Use this template** para criar um novo repositório com base neste modelo.
+[Link do Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset/data)
 
-## Organização do projeto
+Os termos *attrition* ("atrito") e *turnover* ("rotatividade") são frequentemente usados de forma intercambiável no contexto de recursos humanos e gestão de força de trabalho, mas eles se referem a conceitos ligeiramente diferentes em relação às mudanças no número e na composição dos empregados dentro de uma organização. Compreender a distinção entre esses dois é importante para analisar e relatar com precisão a dinâmica da força de trabalho.
 
-```
-├── .env               <- Arquivo de variáveis de ambiente (não versionar)
-├── .gitignore         <- Arquivos e diretórios a serem ignorados pelo Git
-├── ambiente.yml       <- O arquivo de requisitos para reproduzir o ambiente de análise
-├── LICENSE            <- Licença de código aberto se uma for escolhida
-├── README.md          <- README principal para desenvolvedores que usam este projeto.
-|
-├── dados              <- Arquivos de dados para o projeto.
-|
-├── modelos            <- Modelos treinados e serializados, previsões de modelos ou resumos de modelos
-|
-├── notebooks          <- Cadernos Jupyter. A convenção de nomenclatura é um número (para ordenação),
-│                         as iniciais do criador e uma descrição curta separada por `-`, por exemplo
-│                         `01-fb-exploracao-inicial-de-dados`.
-│
-|   └──src             <- Código-fonte para uso neste projeto.
-|      │
-|      ├── __init__.py  <- Torna um módulo Python
-|      ├── config.py    <- Configurações básicas do projeto
-|      └── graficos.py  <- Scripts para criar visualizações exploratórias e orientadas a resultados
-|
-├── referencias        <- Dicionários de dados, manuais e todos os outros materiais explicativos.
-|
-├── relatorios         <- Análises geradas em HTML, PDF, LaTeX, etc.
-│   └── imagens        <- Gráficos e figuras gerados para serem usados em relatórios
-```
+### Atrito
 
-## Configuração do ambiente
+Atrito refere-se à redução gradual de empregados por meio de circunstâncias naturais, como aposentadoria, demissão voluntária por motivos pessoais, ou a decisão de não substituir empregados que estão de saída. Atrito pode levar a uma diminuição no tamanho da força de trabalho, mas é caracterizado por sua natureza voluntária e muitas vezes incontrolável. Organizações podem permitir o atrito para reduzir o tamanho de sua força de trabalho sem recorrer a demissões, vendo isso como uma forma menos disruptiva de ajustar seus níveis de pessoal.
 
-1. Faça o clone do repositório que será criado a partir deste modelo.
+Em análises, quando você está analisando um conjunto de dados para atrito, você frequentemente olha para as razões por trás das saídas voluntárias e a taxa na qual estas ocorrem naturalmente ao longo do tempo. Taxas de atrito podem fornecer insights sobre a satisfação dos empregados e tendências de longo prazo da força de trabalho.
 
-    ```bash
-    git clone ENDERECO_DO_REPOSITORIO
-    ```
+### Rotatividade
 
-2. Crie um ambiente virtual para o seu projeto utilizando o gerenciador de ambientes de sua preferência.
+Rotatividade, por outro lado, engloba um escopo mais amplo de partidas de empregados, incluindo tanto renúncias voluntárias quanto demissões involuntárias (como demissões ou términos por justa causa). Porém, ocorre a substituição da força de trabalho. Rotatividade é uma medida de quantos empregados estão deixando a companhia por qualquer motivo. Uma alta taxa de rotatividade pode indicar problemas com satisfação no trabalho, cultura do local de trabalho, ou estabilidade organizacional, e frequentemente requer ação da gestão para endereçar as causas subjacentes.
 
-    a. Caso esteja utilizando o `conda`, exporte as dependências do ambiente para o arquivo `ambiente.yml`:
+Rotatividade é calculada dividindo o número de empregados que saem pelo número médio de empregados, geralmente em uma base anual, e expressando isso como uma porcentagem. Esta métrica é crucial para entender como as saídas de empregados, tanto voluntárias quanto involuntárias, afetam a capacidade da organização de manter uma força de trabalho estável e eficaz.
 
-      ```bash
-      conda env export > ambiente.yml
-      ```
+### Diferenças Chave
 
-    b. Caso esteja utilizando outro gerenciador de ambientes, exporte as dependências
-    para o arquivo `requirements.txt` ou outro formato de sua preferência. Adicione o
-    arquivo ao controle de versão, removendo o arquivo `ambiente.yml`.
+- **Natureza**: Atrito geralmente é voluntário e pode ser devido a fatores naturais ou incontroláveis, enquanto rotatividade inclui tanto saídas voluntárias quanto demissões involuntárias.
+- **Implicações para Gestão**: Atrito pode ser parte de uma estratégia de ajuste natural da força de trabalho e nem sempre é negativo, enquanto alta rotatividade é frequentemente um sinal de problemas dentro da organização que precisam ser abordados.
+- **Foco Estratégico**: Análise de atrito pode focar em entender tendências de longo prazo da força de trabalho e planejamento de aposentadoria, enquanto análise de rotatividade é frequentemente usada para identificar questões imediatas com satisfação de empregados, engajamento, ou práticas de gestão que podem estar impactando a retenção de staff.
 
-3. Verifique o arquivo `notebooks/01-fb-exemplo.ipynb` para exemplos
-de uso do código.
-4. Renomeie o arquivo `notebooks/01-fb-exemplo.ipynb` para um nome
-mais apropriado ao seu projeto. E siga a convenção de nomenclatura para os demais
-notebooks.
-5. Remova arquivos de exemplo e adicione os arquivos de dados e notebooks do seu
-projeto.
-6. Verifique o arquivo `notebooks/src/config.py` para configurações básicas do projeto.
-Modifique conforme necessário, adicionando ou removendo caminhos de arquivos e
-diretórios.
-7. Atualize o arquivo `referencias/01_dicionario_de_dados.md` com o dicionário de dados
-do seu projeto.
-8. Atualize o `README.md` com informações sobre o seu projeto.
-9. Adicione uma licença ao projeto. Clique
-[aqui](https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
-se precisar de ajuda para escolher uma licença.
-10. Renomeie o arquivo `.env.exemplo` para `.env`
-11. Adicione variáveis de ambiente sensíveis ao arquivo `.env`.
-
-Por padrão, o arquivo `.gitignore` já está configurado para ignorar arquivos de dados e
-arquivos de Notebook (para aqueles que usam ferramentas como
-[Jupytext](https://jupytext.readthedocs.io/en/latest/) e similares). Adicione ou remova
-outros arquivos e diretórios do `.gitignore` conforme necessário. Caso deseje adicionar
-forçadamente um Notebook ao controle de versão, faça um commit forçado com o
-comando `git add --force NOME_DO_ARQUIVO.ipynb`.
-
-Para mais informações sobre como usar Git e GitHub, [clique aqui](https://cienciaprogramada.com.br/2021/09/guia-definitivo-git-github/). Sobre ambientes virtuais, [clique aqui](https://cienciaprogramada.com.br/2020/08/ambiente-virtual-projeto-python/).
+Enquanto ambos atrito e rotatividade lidam com empregados deixando a organização, eles diferem em seu escopo e as implicações estratégicas para gerenciar e entender a dinâmica da força de trabalho. No seu conjunto de dados de empregados, distinguir entre atrito e rotatividade pode ajudar na customização de estratégias para planejamento da força de trabalho, retenção e desenvolvimento organizacional.
