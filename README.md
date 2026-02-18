@@ -4,6 +4,7 @@
 O dataset a ser utilizado é o *IBM HR Analytics Employee Attrition & Performance*, disponível no Kaggle. O dataset contém informações sobre funcionários de uma empresa fictícia, como idade, gênero, estado civil, nível de satisfação, entre outros. O objetivo é prever a probabilidade de um funcionário sair da empresa.
 
 [Link do Kaggle](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset/data)
+[Link do App no Streamlit](https://ibm-classification-project-erickdf1991.streamlit.app/)
 
 Os termos *attrition* ("atrito") e *turnover* ("rotatividade") são frequentemente usados de forma intercambiável no contexto de recursos humanos e gestão de força de trabalho, mas eles se referem a conceitos ligeiramente diferentes em relação às mudanças no número e na composição dos empregados dentro de uma organização. Compreender a distinção entre esses dois é importante para analisar e relatar com precisão a dinâmica da força de trabalho.
 
