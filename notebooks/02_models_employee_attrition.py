@@ -24,6 +24,9 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
+from imblearn.pipeline import Pipeline
+from imblearn.under_sampling import RandomUnderSampler
+
 from sklearn.compose import ColumnTransformer # para aplicar transformações específicas em colunas
 from sklearn.metrics import ConfusionMatrixDisplay # para exibir a matriz de confusão
 from sklearn.model_selection import StratifiedKFold # para validação cruzada estratificada, visto que nosso alvo é desbalanceado
