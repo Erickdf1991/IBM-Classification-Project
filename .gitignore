@@ -8,7 +8,6 @@ __pycache__/
 .ipynb_checkpoints/
 =======
 # Este projeto
-/dados/
 *.ipynb
 
 # Mac OS-specific storage files
