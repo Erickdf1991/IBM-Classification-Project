@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-PASTA_PROJETO = Path(__file__).resolve().parents[2]
+PASTA_PROJETO = Path(__file__).resolve().parents[1]
 
 PASTA_DADOS = PASTA_PROJETO / "dados"
 
